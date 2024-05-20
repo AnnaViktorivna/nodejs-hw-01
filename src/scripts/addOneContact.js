@@ -7,5 +7,5 @@ export const addOneContact = async () => {
   contacts.push(createFakeContact());
   await fs.writeFile(PATH_DB, JSON.stringify(contacts), 'utf-8');
 };
-console.log('Add one contact');
+
 await addOneContact();

@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 
 export const countContacts = async () => {
   const contacts = JSON.parse(await fs.readFile(PATH_DB, 'utf-8'));
-  console.log(contacts.length);
+  return contacts.length;
 };
 
 console.log(await countContacts());

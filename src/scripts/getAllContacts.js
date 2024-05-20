@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 
 export const getAllContacts = async () => {
   const contacts = JSON.parse(await fs.readFile(PATH_DB, 'utf-8'));
-  console.log(contacts);
+  return contacts;
 };
 
 console.log(await getAllContacts());
